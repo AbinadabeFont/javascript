@@ -12,23 +12,31 @@
         <h1>Bem-vindo a área de testes</h1>
     </header>
     <main>
-        <h2>Olá, Abinadabe</h2>
-        <p>Esta área serve para você testar coisas em JS, as quais você aprendeu no <a href="https://www.cursoemvideo.com" target="_blank" rel="external">Curso em Video</a>.</p>
+        <h2>
+            <script>
+            var nome = String(window.prompt('Digite seu nome: '))
+            document.write(`Olá, ${nome}`)
+        </script>
+        </h2>
+        <p>
+            Esta área serve para você testar coisas em JS, as quais você aprendeu no <a href="https://www.cursoemvideo.com" target="_blank" rel="external">Curso em Video</a>.
+        </p>
     </main>
     <script>
         var n1 = Number(window.prompt('Digite o primieiro número: '))
         var n2 = Number(window.prompt('Digite o segundo número: '))
+
         var soma = n1 + n2
         var sub = n1 - n2
         var mul = n1 * n2
         var div = n1 / n2
-        var dii = n1 % n2
+        var divr = n1 % n2
         var pot = n1 ** n2 
 
         document.write(`A soma dos números ${n1} e ${n2} é igual a: `, n1 + n2 + `<br>`)
         document.write(`A subtração dos números ${n1} e ${n2} é igual a: `, n1 - n2 + `<br>`)
         document.write(`A multiplicação dos números ${n1} e ${n2} é igual a: `, n1 * n2 + `<br>`)
-        document.write(`A duvisão dos números ${n1} e ${n2} é igual a: `, n1 / n2 + `<br>`)
+        document.write(`A duvisão dos números ${n1} e ${n2} é igual a: `, (n1 / n2).toFixed(5) + `<br>`)
         document.write(`O resto da divisão dos números ${n1} e ${n2} é igual a: `, n1 % n2 + `<br>`)
         document.write(`A exponenciação do número ${n2} na base ${n1} é igual a: `, n1 ** n2 + `<br> <br>`)
 
@@ -37,8 +45,8 @@
         document.write(`A soma dos números ${n1} e ${n2} é igual a: ${soma} <br>`)
         document.write(`A subtração dos números ${n1} e ${n2} é igual a: ${sub} <br>`)
         document.write(`A multiplicação dos números ${n1} e ${n2} é igual a: ${mul} <br>`)
-        document.write(`A duvisão dos números ${n1} e ${n2} é igual a: ${div} <br>`)
-        document.write(`O resto da divisão dos números ${n1} e ${n2} é igual a: ${dii} <br>`)
+        document.write(`A duvisão dos números ${n1} e ${n2} é igual a: ${div.toFixed(5)} <br>`)
+        document.write(`O resto da divisão dos números ${n1} e ${n2} é igual a: ${divr} <br>`)
         document.write(`A potenciação entre os números ${n1} e ${n2} é igual a: ${pot}`)
     </script>
 </body>
